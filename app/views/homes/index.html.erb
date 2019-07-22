@@ -31,3 +31,13 @@
 		<p>We have been voted number one for three consercutive years.</p>
 	</div>
 </div>
+
+<% @homes.each do |home| %>
+	<div class="booyah-box col-10 offset-1">
+		<h1><%= home.name %></h1>
+		<i><%= home.description %></i><br />
+
+		<h1><%= home.grade %></h1><br />
+	</div>
+	<hr />
+	<% end %>

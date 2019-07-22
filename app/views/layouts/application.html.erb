@@ -10,17 +10,27 @@
   </head>
 
   <body>
-    <div class="pos-f-t">
-  <div class="collapse" id="navbarToggleExternalContent">
-    <div class="bg-inverse p-4">
-      <h4 class="text-white">My First Quiz Test</h4>
-      <span class="text-muted">I hope you like my first quiz App.</span>
-    </div>
-  </div>
-  <nav class="navbar navbar-inverse bg-inverse">
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
+    
+   <nav class="navbar navbar-toggleable-md navbar-inverse bg-inverse">
+      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+    <%= link_to 'Home', root_path, class: 'navbar-brand' %>
+
+      <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+        <ul class="navbar-nav mr-auto mt-2 mt-md-0">
+          
+      <li class="nav-item">
+            <a class="nav-link" href="#">Link</a>
+             <%= link_to new_home_path, class: 'nav-link' do %>
+              <i class="fa fa-plus-circle"></i>
+                New Home
+              <% end %>
+          </li>
+          
+        </ul>
+      </div>
   </nav>
 </div>
     <%= yield %>
